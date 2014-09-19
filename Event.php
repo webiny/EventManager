@@ -29,9 +29,10 @@ class Event implements \ArrayAccess, \IteratorAggregate
         if (!$this->isNull($eventData)) {
             if (!$this->isArray($eventData) && !$this->isArrayObject($eventData)) {
                 throw new EventManagerException(EventManagerException::MSG_INVALID_ARG, [
-                    '$eventData',
-                    'array|ArrayObject'
-                ]);
+                        '$eventData',
+                        'array|ArrayObject'
+                    ]
+                );
             }
             $this->_eventData = $this->arr($eventData);
         } else {
