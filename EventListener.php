@@ -65,9 +65,10 @@ class EventListener
     {
         if (!$this->isNumber($priority)) {
             throw new EventManagerException(EventManagerException::MSG_INVALID_ARG, [
-                '$priority',
-                'integer'
-            ]);
+                    '$priority',
+                    'integer'
+                ]
+            );
         }
 
         if ($priority <= 100 || $priority >= 1000) {
@@ -92,9 +93,10 @@ class EventListener
     {
         if (!$this->isString($method) && !$this->isStringObject($method)) {
             throw new EventManagerException(EventManagerException::MSG_INVALID_ARG, [
-                '$method',
-                'string|StringObject'
-            ]);
+                    '$method',
+                    'string|StringObject'
+                ]
+            );
         }
         $this->_method = StdObjectWrapper::toString($method);
 
